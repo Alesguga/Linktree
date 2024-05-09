@@ -1,0 +1,29 @@
+---
+import Cards from "../components/Cards.astro";
+import RoundImg from "../components/RoundImg.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Mi linktree!">
+	<main class="flex flex-col items-center">
+		<RoundImg />
+		<div class="text-center">
+			<a
+				href="https://github.com/alesguga"
+				target="_blank"
+				rel="noopener"
+				class="text-xl font-semibold mt-2 text-white"
+			>
+				@alesguga
+			</a>
+			<h1
+				class="text-4xl mt-3 font-bold text-white hover:scale-110 transition bg-gradient-to-tl from-blue-500 via-yellow-500 to-teal-500 text-transparent bg-clip-text"
+			>
+				Encuentrame aqui!
+			</h1>
+		</div>
+		<div class="w-[32rem] mt-5">
+			<Cards />
+		</div>
+	</main>
+</Layout>
