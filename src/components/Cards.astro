@@ -1,34 +1,48 @@
 ---
-import '@fontsource-variable/orbitron';
+import "@fontsource-variable/orbitron";
+import GitHub from "../components/icons/GitHub.astro";
+import Instagram from "./icons/Instagram.astro";
+import Frame from "./icons/Frame.astro";
+import LinkedIn from "./icons/LinkedIn.astro";
+import X from "./icons/X.astro";
 
 const cardItems = [
     {
         title: "GitHub",
-        url: "https://github.com/alesguga"
+        url: "https://github.com/alesguga",
+        logo: GitHub,
     },
     {
         title: "Mi Portfolio",
-        url: "https://gutigut.com"
+        url: "https://gutigut.com",
+        logo: Frame,
     },
     {
         title: "LinkedIn",
-        url: "https://gutigut.com"
+        url: "https://www.linkedin.com/in/alejandro-guti%C3%A9rrez-4b863b295/",
+        logo: LinkedIn,
     },
     {
         title: "Instagram",
-        url: "https://gutigut.com"
+        url: "https://www.instagram.com/aleex_gutierrezz/",
+        logo: Instagram,
     },
     {
         title: "Twitter",
-        url: "https://gutigut.com"
+        url: "https://twitter.com/aalexgutierrez7",
+        logo: X,
     },
-]
+];
 ---
 
 {
     cardItems.map((link) => (
-        <div class="bg-white shadow-md  rounded-md text-center my-5  hover:scale-105 hover:shadow-lg duration-150 transition p-3 ">
-            <a class="text-lg text-black" target="_blank" rel="noopener" href={link.url}>{link.title}</a>
-        </div> 
+        <a href={link.url} target="_blank" rel="noopener" class="block">
+            <div class="bg-white shadow-md flex items-center justify-start rounded-md my-5 hover:scale-105 hover:shadow-lg duration-150 transition p-3">
+                {link.logo && <link.logo class=" flex-shrink-0 size-6" />} 
+                <span class="text-lg text-black flex-grow text-center">{link.title}</span> 
+            </div>
+        </a>
     ))
 }
+
