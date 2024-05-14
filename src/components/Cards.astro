@@ -38,9 +38,9 @@ const cardItems = [
 {
     cardItems.map((link) => (
         <a href={link.url} target="_blank" rel="noopener" class="block">
-            <div class="bg-white shadow-md flex items-center justify-start rounded-md my-5 hover:scale-105 hover:shadow-lg duration-150 transition p-3">
+            <div class="bg-zinc-800 shadow-md flex items-center justify-start rounded-md my-5 hover:scale-105 hover:shadow-lg duration-150 transition p-3">
                 {link.logo && <link.logo class=" flex-shrink-0 size-6" />} 
-                <span class="text-lg text-black flex-grow text-center">{link.title}</span> 
+                <span class="text-lg text-white flex-grow text-center">{link.title}</span> 
             </div>
         </a>
     ))
