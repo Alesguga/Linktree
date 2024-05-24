@@ -8,47 +8,53 @@ import X from "./icons/X.astro";
 import Gmail from "./icons/Gmail.astro";
 
 const cardItems = [
-    {
-        title: "Envíame un Mail",
-        url: "alesguga@protonmail.com",
-        logo: Gmail,
-    },
-    {
-        title: "LinkedIn",
-        url: "https://www.linkedin.com/in/alejandro-guti%C3%A9rrez-4b863b295/",
-        logo: LinkedIn,
-    },
-    {
-        title: "GitHub",
-        url: "https://github.com/alesguga",
-        logo: GitHub,
-    },
-    {
-        title: "Mi Portfolio",
-        url: "https://gutigut.com",
-        logo: Frame,
-    },
-    {
-        title: "Instagram",
-        url: "https://www.instagram.com/aleex_gutierrezz/",
-        logo: Instagram,
-    },
-    {
-        title: "Twitter",
-        url: "https://twitter.com/aalexgutierrez7",
-        logo: X,
-    },
+  {
+    title: "Envíame un Mail",
+    url: "alesguga@protonmail.com",
+    logo: Gmail,
+  },
+  {
+    title: "LinkedIn",
+    url: "https://www.linkedin.com/in/alejandro-guti%C3%A9rrez-4b863b295/",
+    logo: LinkedIn,
+  },
+  {
+    title: "GitHub",
+    url: "https://github.com/alesguga",
+    logo: GitHub,
+  },
+  {
+    title: "Mi Portfolio",
+    url: "https://gutigut.com",
+    logo: Frame,
+  },
+  {
+    title: "Instagram",
+    url: "https://www.instagram.com/aleex_gutierrezz/",
+    logo: Instagram,
+  },
+  {
+    title: "Twitter",
+    url: "https://twitter.com/aalexgutierrez7",
+    logo: X,
+  },
 ];
 ---
 
 {
-    cardItems.map((link) => (
-        <a href={link.title === 'Gmail' ? `mailto:${link.url}` : link.url} target="_blank" rel="noopener" class="block">
-            <div class="bg-zinc-800 shadow-md flex items-center justify-start rounded-md my-5 hover:scale-105 hover:shadow-lg duration-100 transition p-3">
-                {link.logo && <link.logo class=" flex-shrink-0 size-6" />} 
-                <span class="text-lg text-white flex-grow text-center">{link.title}</span> 
-            </div>
-        </a>
-    ))
+  cardItems.map((link) => (
+    <a
+      href={link.title === "Envíame un Mail" ? `mailto:${link.url}` : link.url}
+      target="_blank"
+      rel="noopener"
+      class="block"
+    >
+      <div class="bg-zinc-800 shadow-md flex items-center justify-start rounded-md my-5 hover:scale-105 hover:shadow-lg duration-100 transition p-3">
+        {link.logo && <link.logo class=" flex-shrink-0 size-6" />}
+        <span class="text-lg text-white flex-grow text-center">
+          {link.title}
+        </span>
+      </div>
+    </a>
+  ))
 }
-
