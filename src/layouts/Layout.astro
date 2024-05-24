@@ -10,7 +10,7 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en" class=" min-h-screen ">
+<html lang="en" class="min-h-screen bg-no-repeat bg-cover" style="background-image: url('/hola.svg');">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
@@ -19,17 +19,7 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="flex flex-col justify-center items-center cursor-[url('/Png.png'),auto]" >
-
+	<body class="flex flex-col justify-center items-center cursor-[url('/Png.png'),auto]">
 		<slot />
-	  </body>
-	  
+	</body>
 </html>
-<style>
-	html {
-		background-image: url('/hola.svg');
-		background-repeat: no-repeat;
-		background-size: cover;
-	}
-
-</style>

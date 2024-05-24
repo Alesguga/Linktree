@@ -5,8 +5,19 @@ import Instagram from "./icons/Instagram.astro";
 import Frame from "./icons/Frame.astro";
 import LinkedIn from "./icons/LinkedIn.astro";
 import X from "./icons/X.astro";
+import Gmail from "./icons/Gmail.astro";
 
 const cardItems = [
+    {
+        title: "Envíame un Mail",
+        url: "alesguga@protonmail.com",
+        logo: Gmail,
+    },
+    {
+        title: "LinkedIn",
+        url: "https://www.linkedin.com/in/alejandro-guti%C3%A9rrez-4b863b295/",
+        logo: LinkedIn,
+    },
     {
         title: "GitHub",
         url: "https://github.com/alesguga",
@@ -16,11 +27,6 @@ const cardItems = [
         title: "Mi Portfolio",
         url: "https://gutigut.com",
         logo: Frame,
-    },
-    {
-        title: "LinkedIn",
-        url: "https://www.linkedin.com/in/alejandro-guti%C3%A9rrez-4b863b295/",
-        logo: LinkedIn,
     },
     {
         title: "Instagram",
@@ -37,7 +43,7 @@ const cardItems = [
 
 {
     cardItems.map((link) => (
-        <a href={link.url} target="_blank" rel="noopener" class="block">
+        <a href={link.title === 'Gmail' ? `mailto:${link.url}` : link.url} target="_blank" rel="noopener" class="block">
             <div class="bg-zinc-800 shadow-md flex items-center justify-start rounded-md my-5 hover:scale-105 hover:shadow-lg duration-100 transition p-3">
                 {link.logo && <link.logo class=" flex-shrink-0 size-6" />} 
                 <span class="text-lg text-white flex-grow text-center">{link.title}</span> 
